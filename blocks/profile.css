@@ -21,6 +21,10 @@
   width: 149px;
   height: 52px;
 }
+.profile__add-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 
 .profile__avatar {
   height: 190px;
@@ -74,8 +78,13 @@
   text-align: left;
   background-color: transparent;
   border: none;
-  color:#212121
-  opacity: 0.7;
+  opacity: 0.8;
+  color: #212121;
+}
+
+.profile__edit-button:hover {
+  cursor: pointer;
+  opacity: 1;
 }
 
 @media screen and (max-width: 627px) {
