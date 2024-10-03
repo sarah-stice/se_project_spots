@@ -5,8 +5,13 @@
 }
 
 .profile__add-button {
+  border: none;
   margin-left: auto;
   margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   background-color: #212121;
   color: #fcf5e5;
   font-weight: 500;
@@ -29,6 +34,7 @@
 }
 
 .profile__name {
+  color: #212121;
   margin: 0 0 12px;
   max-width: 420px;
   font-weight: 500;
@@ -44,6 +50,8 @@
 .profile__description {
   margin: 0;
   max-width: 420px;
+  color: #212121;
+  opacity: 0.7;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
@@ -55,6 +63,10 @@
 }
 
 .profile__edit-button {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0;
   margin-top: auto;
   font-weight: 500;
   font-size: 16px;
@@ -62,6 +74,7 @@
   text-align: left;
   background-color: transparent;
   border: none;
+  color:#212121
   opacity: 0.7;
 }
 
@@ -85,21 +98,11 @@
     font-size: 20px;
     margin-bottom: 6px;
     max-width: 288px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   .profile__description {
     margin-bottom: 32px;
     max-width: 288px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   .profile__column {

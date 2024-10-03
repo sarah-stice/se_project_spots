@@ -3,17 +3,18 @@
   width: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 8px 8px;
+  border-radius: 8px;
 }
 
 .card__content {
+  margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .card__title {
-  padding-top: 12px;
+  max-width: 355px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
