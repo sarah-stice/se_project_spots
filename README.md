@@ -20,3 +20,8 @@ Spots is a multi-unit project implemented within the TripleTen curriculum. This 
 This webpage is deployed to GitHub Pages
 
 - [Deployment link](https://sarah-stice.github.io/se_project_spots/)
+
+## Project Video
+
+- This project contains an overview video, which answers questions about project organization and methods used.
+- [Deployment link](https://drive.google.com/file/d/1BDtVAVSeS8yQSp7bTQd_BQDiJjEXLqBH/view?usp=drive_link)

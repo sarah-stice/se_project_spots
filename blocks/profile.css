@@ -15,7 +15,7 @@
   background-color: #212121;
   color: #fcf5e5;
   font-weight: 500;
-  font-style: 16px;
+  font-size: 16px;
   line-height: 1;
   border-radius: 8px;
   width: 149px;
@@ -78,7 +78,7 @@
   text-align: left;
   background-color: transparent;
   border: none;
-  opacity: 0.8;
+  opacity: 0.7;
   color: #212121;
 }
 
@@ -120,6 +120,7 @@
 
   .profile__edit-button {
     text-align: center;
+    justify-content: center;
   }
 
   .profile__add-button {
