@@ -32,8 +32,6 @@
   border: none;
   background-color: transparent;
   opacity: 0.4;
-  /* background-position: center;
-  background-repeat: no-repeat; */
 }
 
 .card__like-button:hover {
