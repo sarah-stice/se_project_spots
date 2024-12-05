@@ -60,10 +60,16 @@ function getCardElement(data) {
 
   const cardNameElement = cardElement.querySelector(".card__title");
   const cardImageElement = cardElement.querySelector(".card__image");
+  const cardLikeButton = cardElement.querySelector(".card__like-button");
 
   cardNameElement.textContent = data.name;
   cardImageElement.alt = data.name;
   cardImageElement.src = data.link;
+
+  cardLikeButton.addEventListener("click", () => {
+    cardLikeButton.classList.toggle("card__like-button_liked");
+  });
+
   return cardElement;
 }
 
@@ -74,6 +80,10 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
+
+// function clickLike(button) {
+//   button.classList.add(".card__like-button_liked");
+// }
 
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
