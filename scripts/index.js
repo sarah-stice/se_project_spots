@@ -23,7 +23,6 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
-
   {
     name: "Landscape Image",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
@@ -55,6 +54,14 @@ const postLinkInput = newPostModal.querySelector("#image-link-input");
 const postCaptionInput = newPostModal.querySelector("#image-caption-input");
 const postFormElement = newPostModal.querySelector(".modal__form");
 
+// Image Preview Elements
+const imageViewModal = document.querySelector("#image-view-modal");
+const imageViewCloseButton = imageViewModal.querySelector(
+  ".modal__close-button"
+);
+const imagePreview = imageViewModal.querySelector(".modal__image");
+const imagePreviewCaption = imageViewModal.querySelector(".modal__caption");
+
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
@@ -80,6 +87,13 @@ function getCardElement(data) {
     cardElement.remove();
   });
 
+  cardImageElement.addEventListener("click", () => {
+    openModal(imageViewModal);
+
+    imagePreview.src = data.link;
+    imagePreviewCaption.textContent = data.name;
+  });
+
   return cardElement;
 }
 
@@ -90,10 +104,6 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
-
-// function clickLike(button) {
-//   button.classList.add(".card__like-button_liked");
-// }
 
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
@@ -121,6 +131,10 @@ newPostButton.addEventListener("click", () => {
 
 postCloseButton.addEventListener("click", () => {
   closeModal(newPostModal);
+});
+
+imageViewCloseButton.addEventListener("click", () => {
+  closeModal(imageViewModal);
 });
 
 postFormElement.addEventListener("submit", handleNewPostSubmit);
