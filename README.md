@@ -4,16 +4,19 @@ Spots is an image sharing social media website.
 
 ## Description
 
-Spots is a multi-unit project implemented within the TripleTen curriculum. This project is a media-sharing app based on image and text media where users can input their own profiles and view other profiles. This current iteration is the first step in which the website was designed and made to be responsive, so it can be seamlessly functional for desktop as well as tablet and mobile users. As the project develops in further iterations, more information will be added to this description.
+Spots is a multi-unit project implemented within the TripleTen curriculum. This project is a media-sharing app based on image and text media where users can input their own profiles and view other profiles. This current iteration has added functionality using modals to display previews of images. This iteration also adds smooth transitions for modal opening and closing. As the project develops in further iterations, more information will be added to this description.
 
 ## Tech Stack
 
 - HTML
 - CSS
+- Javascript
 - Responsive Design
 - Grid
 - Flex Containers
 - Text Overflow
+- Arrays
+- Forms and Templates
 
 ## Deployment
 
