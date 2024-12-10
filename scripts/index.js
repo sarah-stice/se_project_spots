@@ -92,6 +92,7 @@ function getCardElement(data) {
 
     imagePreview.src = data.link;
     imagePreviewCaption.textContent = data.name;
+    imagePreview.alt = data.name;
   });
 
   return cardElement;
@@ -151,6 +152,8 @@ function handleNewPostSubmit(evt) {
   const cardElement = getCardElement(inputVariables);
   cardsList.prepend(cardElement);
   closeModal(newPostModal);
+  evt.target.reset();
+  // postFormElement.reset();
 }
 
 // for (let i = 0; i < initialCards.length; i++) {
