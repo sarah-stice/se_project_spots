@@ -66,8 +66,6 @@ const imagePreviewCaption = imageViewModal.querySelector(".modal__caption");
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
-const modalOverlay = document.querySelector("modal");
-
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -167,4 +165,25 @@ function handleNewPostSubmit(evt) {
 initialCards.forEach(function (i) {
   const cardElement = getCardElement(i);
   cardsList.append(cardElement);
+});
+
+const modal = document.querySelectorAll(".modal");
+
+function closeModalClickOutside(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closeModal(evt.target);
+  }
+}
+
+function closeModalEsc(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_opened");
+    closeModal(openedModal);
+  }
+}
+
+modal.forEach((modal) => {
+  modal.addEventListener("mousedown", closeModalClickOutside);
+
+  document.addEventListener("keydown", closeModalEsc);
 });
