@@ -101,10 +101,12 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", closeModalEsc);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", closeModalEsc);
 }
 
 profileEditButton.addEventListener("click", () => {
@@ -184,6 +186,4 @@ function closeModalEsc(evt) {
 
 modal.forEach((modal) => {
   modal.addEventListener("mousedown", closeModalClickOutside);
-
-  document.addEventListener("keydown", closeModalEsc);
 });
