@@ -66,6 +66,8 @@ const imagePreviewCaption = imageViewModal.querySelector(".modal__caption");
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
+const modalOverlay = document.querySelector("modal");
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
