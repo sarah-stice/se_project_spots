@@ -122,8 +122,15 @@ profileEditButton.addEventListener("click", () => {
   );
 });
 
-editModalCloseButton.addEventListener("click", () => {
-  closeModal(editModal);
+// editModalCloseButton.addEventListener("click", () => {
+//   closeModal(editModal);
+// });
+
+const closeButtons = document.querySelectorAll(".modal__close-button");
+
+closeButtons.forEach((button) => {
+  const window = button.closest(".modal");
+  button.addEventListener("click", () => closeModal(window));
 });
 
 function handleEditFormSubmit(evt) {
@@ -140,13 +147,13 @@ newPostButton.addEventListener("click", () => {
   openModal(newPostModal);
 });
 
-postCloseButton.addEventListener("click", () => {
-  closeModal(newPostModal);
-});
+// postCloseButton.addEventListener("click", () => {
+//   closeModal(newPostModal);
+// });
 
-imageViewCloseButton.addEventListener("click", () => {
-  closeModal(imageViewModal);
-});
+// imageViewCloseButton.addEventListener("click", () => {
+//   closeModal(imageViewModal);
+// });
 
 postFormElement.addEventListener("submit", handleNewPostSubmit);
 
