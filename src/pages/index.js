@@ -1,3 +1,15 @@
+import "./index.css";
+import spotsSrc from "../images/logo.svg";
+import avatarSrc from "../images/avatar.jpg";
+import pencilSrc from "../images/pencil.svg";
+import plusSrc from "../images/plus.svg";
+
+import {
+  enableValidation,
+  settings,
+  resetValidation,
+} from "../scripts/validation.js";
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -28,6 +40,19 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
 ];
+
+const spotsImage = document.getElementById("spots-logo");
+spotsImage.src = spotsSrc;
+
+const avatarImage = document.getElementById("avatar-image");
+avatarImage.src = avatarSrc;
+
+const pencilImage = document.getElementById("pencil-icon");
+pencilImage.src = pencilSrc;
+
+const plusImage = document.getElementById("plus-sign");
+plusImage.src = plusSrc;
+
 //Profile Elements
 const profileEditButton = document.querySelector(".profile__edit-button");
 const profileName = document.querySelector(".profile__name");
@@ -196,3 +221,5 @@ function closeModalEsc(evt) {
 modal.forEach((modal) => {
   modal.addEventListener("mousedown", closeModalClickOutside);
 });
+
+enableValidation(settings);
