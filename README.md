@@ -28,3 +28,5 @@ This webpage is deployed to GitHub Pages
 
 - This project contains an overview video, which answers questions about project organization and methods used.
 - [Deployment link](https://drive.google.com/file/d/1BDtVAVSeS8yQSp7bTQd_BQDiJjEXLqBH/view?usp=drive_link)
+
+authentication token: "token":"8067d86e-9bc6-45c7-96ec-e7f90045dfb1" (passed with each server request)
