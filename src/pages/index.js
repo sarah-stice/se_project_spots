@@ -88,9 +88,6 @@ const deleteCardForm = document.forms["delete-card-form"];
 const deleteCardDeleteButton = deleteCardModal.querySelector(
   ".modal__submit-button_type-delete"
 );
-const deleteCardCancelButton = deleteCardModal.querySelector(
-  ".modal__submit-button_type_cancel"
-);
 
 //Form Post Elements
 const newPostModal = document.querySelector("#new-post-modal");
@@ -177,6 +174,15 @@ closeButtons.forEach((button) => {
   button.addEventListener("click", () => closeModal(window));
 });
 
+const cancelButtons = document.querySelectorAll(
+  ".modal__submit-button_type_cancel"
+);
+
+cancelButtons.forEach((button) => {
+  const window = button.closest(".modal");
+  button.addEventListener("click", () => closeModal(window));
+});
+
 function handleImageClick(data) {
   imagePreview.src = data.link;
   imagePreviewCaption.textContent = data.name;
@@ -259,6 +265,7 @@ function handleAddCard(evt) {
       cardsList.prepend(cardElement);
       closeModal(newPostModal);
       postFormElement.reset();
+      disableButton(submitButton, settings);
     })
     .catch(console.error)
     .finally(() => {
@@ -292,7 +299,7 @@ function handleCardDelete(cardElement, cardId) {
   openModal(deleteCardModal);
 }
 
-const modal = document.querySelectorAll(".modal");
+const modals = document.querySelectorAll(".modal");
 
 function closeModalClickOutside(evt) {
   if (evt.target.classList.contains("modal")) {
@@ -307,7 +314,7 @@ function closeModalEsc(evt) {
   }
 }
 
-modal.forEach((modal) => {
+modals.forEach((modal) => {
   modal.addEventListener("mousedown", closeModalClickOutside);
 });
 
